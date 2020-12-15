@@ -5,7 +5,8 @@ function App() {
 
   return (
     <>
-      <HelloButtoncha />
+      <HelloButtoncha ism="Muhammadbobur"/>
+      <h2>men app functionini ichidaman</h2>
     </>
   )
 }

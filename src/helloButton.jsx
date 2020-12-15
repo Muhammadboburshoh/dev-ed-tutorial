@@ -1,7 +1,7 @@
 import React from "react"
 
 
- function HelloButton () {
+ function HelloButton (props) {
 
   const helloButton = () => {
     console.log("Salomcha");
@@ -9,8 +9,8 @@ import React from "react"
   
   return (
     <>
-      <h1>Hello Racat</h1>
-      <button onClick={helloButton}>Hello</button>
+      <h1>{props.ism}</h1>
+      <button onClick={helloButton}>{props.ism}</button>
     </>
   )
 }
