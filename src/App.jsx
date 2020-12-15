@@ -1,12 +1,22 @@
+import { useState } from 'react'
 import './App.css'
-import HelloButtoncha from "./helloButton"
 
 function App() {
 
+  const [isRed, setRed] = useState(false)
+  const [raqam, setRaqam] = useState(0)
+
+  const qosh = () => {
+    setRaqam(raqam + 1)
+    setRed(!isRed);
+  }
+
+
   return (
     <>
-      <HelloButtoncha ism="Muhammadbobur"/>
-      <h2>men app functionini ichidaman</h2>
+      <h1 className={isRed ? "red" : ""}>Men qizil bo'laman nasib qilsa</h1>
+      <button onClick={qosh}>+</button>
+      <span> {raqam}</span>
     </>
   )
 }
